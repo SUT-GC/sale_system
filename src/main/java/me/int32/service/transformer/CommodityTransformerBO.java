@@ -1,6 +1,6 @@
 package me.int32.service.transformer;
 
-import me.int32.core.dao.po.CommodityPO;
+import me.int32.dao.po.CommodityPO;
 import me.int32.service.bo.CommodityBO;
 import me.int32.service.bo.CommoditySourceBO;
 import me.int32.service.bo.DataStatusBO;

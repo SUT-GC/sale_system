@@ -1,6 +1,6 @@
 package me.int32.service.impl;
 
-import me.int32.core.dao.repositories.CartRepository;
+import me.int32.dao.repositories.CartRepository;
 import me.int32.service.api.CartService;
 import me.int32.service.bo.CartBO;
 import me.int32.service.transformer.CartTransformerBO;

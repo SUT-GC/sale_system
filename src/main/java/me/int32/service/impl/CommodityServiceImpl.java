@@ -1,7 +1,7 @@
 package me.int32.service.impl;
 
-import me.int32.core.dao.po.CommodityPO;
-import me.int32.core.dao.repositories.CommodityRepository;
+import me.int32.dao.po.CommodityPO;
+import me.int32.dao.repositories.CommodityRepository;
 import me.int32.exception.InvalidParamException;
 import me.int32.service.api.CommodityService;
 import me.int32.service.bo.CommodityBO;

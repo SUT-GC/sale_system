@@ -1,4 +1,4 @@
-package me.int32.core.dao.po;
+package me.int32.dao.po;
 
 
 import lombok.Data;

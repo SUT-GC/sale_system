@@ -1,6 +1,6 @@
-package me.int32.core.dao.repositories;
+package me.int32.dao.repositories;
 
-import me.int32.core.dao.po.OrderPO;
+import me.int32.dao.po.OrderPO;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

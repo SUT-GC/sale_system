@@ -1,6 +1,6 @@
 package me.int32.service.impl;
 
-import me.int32.core.dao.repositories.OrderRepository;
+import me.int32.dao.repositories.OrderRepository;
 import me.int32.service.api.OrderService;
 import me.int32.service.bo.OrderBO;
 import me.int32.service.transformer.OrderTransformerBO;
