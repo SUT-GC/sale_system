@@ -12,4 +12,6 @@ public interface CommodityService {
     CommodityBO save(CommodityBO commodityBO) throws InvalidParamException;
 
     List<CommodityBO> findByIds(List<Long> commodityIds);
+
+    void delete(Long id) throws InvalidParamException;
 }

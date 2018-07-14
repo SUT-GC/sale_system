@@ -11,10 +11,14 @@ import java.util.List;
 @Repository
 public interface CommodityRepository extends CrudRepository<CommodityPO, Long> {
 
+    @Query(value = "from CommodityPO where dataStatus = 1")
     List<CommodityPO> findAll();
 
-    @Query(value = "from CommodityPO where name = :name and sku = :sku")
+    @Query(value = "from CommodityPO where name = :name and sku = :sku and dataStatus = 1")
     List<CommodityPO> findByNameAndSku(@Param("name") String name, @Param("sku") String sku);
 
+    @Query(value = "from CommodityPO where id in :ids and dataStatus = 1")
     List<CommodityPO> findAllById(List<Long> ids);
+
+    CommodityPO save(CommodityPO commodityPO);
 }

@@ -58,4 +58,17 @@ public class CommodityController {
             return ResultDTO.of(ResultStatusDTO.error(e), null);
         }
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+    public ResultDTO delete(@RequestParam(value = "id") Long id) {
+        try {
+            ValidateNull.validateNull(id);
+            commodityService.delete(id);
+
+            return ResultDTO.of(ResultStatusDTO.success(), null);
+        } catch (Exception e) {
+            return ResultDTO.of(ResultStatusDTO.error(e), null);
+        }
+    }
 }
