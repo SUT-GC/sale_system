@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class OrderBO {
-    private long id;
+    private Long id;
 
     private String userName;
 

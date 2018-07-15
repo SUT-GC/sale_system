@@ -18,6 +18,8 @@ public class CartDTO {
 
     private Double profit;
 
+    private CommodityDTO commodity;
+
     private DataStatusDTO dataStatus;
 
     private LocalDateTime createdAt;

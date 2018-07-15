@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface OrderService {
     List<OrderBO> getAll();
+
+    OrderBO save(OrderBO orderBO);
+
+    OrderBO findById(Long id);
 }

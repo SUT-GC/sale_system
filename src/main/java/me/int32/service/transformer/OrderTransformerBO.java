@@ -61,7 +61,7 @@ public class OrderTransformerBO {
         orderPO.setUserPhone(orderBO.getUserPhone());
         orderPO.setDeliveryNumber(orderBO.getDeliveryNumber());
         orderPO.setDataStatus(orderBO.getDataStatus() == null ? 0 : orderBO.getDataStatus().getValue());
-        orderPO.setStatus(orderBO.getOrderStatus() == null ? 0 : orderBO.getDataStatus().getValue());
+        orderPO.setStatus(orderBO.getOrderStatus() == null ? 0 : orderBO.getOrderStatus().getValue());
         orderPO.setCreatedAt(orderBO.getCreatedAt());
         orderPO.setUpdatedAt(orderBO.getUpdatedAt());
         orderPO.setRemovedAt(orderBO.getRemovedAt());

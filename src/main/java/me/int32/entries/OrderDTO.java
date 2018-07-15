@@ -5,6 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 @Data
 public class OrderDTO {
@@ -20,9 +21,9 @@ public class OrderDTO {
 
     private String deliveryNumber;
 
-    private List<CommodityDTO> commodities;
-
     private List<CartDTO> carts;
+
+    private Double totalProfit;
 
     private OrderStatusDTO orderStatus;
 

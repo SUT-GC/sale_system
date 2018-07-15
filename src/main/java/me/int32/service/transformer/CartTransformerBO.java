@@ -9,10 +9,11 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class CartTransformerBO {
-    public List<CartBO> transform(List<CartPO> cartPOS) {
+    public List<CartBO> transformPO(List<CartPO> cartPOS) {
         if (cartPOS == null) {
             return null;
         }
@@ -20,13 +21,13 @@ public class CartTransformerBO {
         List<CartBO> cartBOS = new ArrayList<>();
 
         cartPOS.forEach(p -> {
-            cartBOS.add(transform(p));
+            cartBOS.add(transformPO(p));
         });
 
         return cartBOS;
     }
 
-    public CartBO transform(CartPO cartPO) {
+    public CartBO transformPO(CartPO cartPO) {
         if (cartPO == null) {
             return null;
         }
@@ -47,7 +48,7 @@ public class CartTransformerBO {
         return cartBO;
     }
 
-    public CartPO transform(CartBO cartBO) {
+    public CartPO transformFromBO(CartBO cartBO) {
         if (cartBO == null) {
             return null;
         }
@@ -66,5 +67,13 @@ public class CartTransformerBO {
         cartPO.setUpdatedAt(cartBO.getUpdatedAt());
 
         return cartPO;
+    }
+
+    public List<CartPO> transformFromBO(List<CartBO> cartBOS) {
+        if (cartBOS == null) {
+            return null;
+        }
+
+        return cartBOS.stream().map(this::transformFromBO).collect(Collectors.toList());
     }
 }

@@ -12,5 +12,4 @@ import java.util.List;
 public interface CartRepository extends CrudRepository<CartPO, Long> {
     @Query("from CartPO where orderId in :orderIds")
     List<CartPO> findByOrderIds(@Param("orderIds") List<Long> orderIds);
-
 }

@@ -70,7 +70,7 @@ public class CommodityServiceImpl implements CommodityService {
             return new ArrayList<>();
         }
 
-        return commodityTransformer.transform(commodityRepository.findAllById(commodityIds));
+        return commodityTransformer.transform(commodityRepository.findAllByIds(commodityIds));
     }
 
     @Override

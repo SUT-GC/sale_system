@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface CartService {
     List<CartBO> findByOrderIds(List<Long> orderIds);
+
+    List<CartBO> save(List<CartBO> cartBOS);
 }
