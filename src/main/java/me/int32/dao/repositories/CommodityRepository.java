@@ -17,7 +17,7 @@ public interface CommodityRepository extends CrudRepository<CommodityPO, Long> {
     @Query(value = "from CommodityPO where name = :name and sku = :sku and dataStatus = 1")
     List<CommodityPO> findByNameAndSku(@Param("name") String name, @Param("sku") String sku);
 
-    @Query(value = "from CommodityPO where id in :ids and dataStatus = 1")
+    @Query(value = "from CommodityPO where id in :ids")
     List<CommodityPO> findAllByIds(@Param("ids") List<Long> ids);
 
     CommodityPO save(CommodityPO commodityPO);

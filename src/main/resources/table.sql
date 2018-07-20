@@ -24,7 +24,7 @@ CREATE TABLE `sale_system_order` (
   `user_phone` varchar(255) NOT NULL DEFAULT '' COMMENT '下单手机号',
   `user_nick` varchar(255) NOT NULL DEFAULT '' COMMENT '下单人微信昵称',
   `user_address` varchar(512) NOT NULL DEFAULT '' COMMENT '收货人地址',
-  `delivery_num` int(11) NOT NULL DEFAULT '0' COMMENT '快递单号',
+  `delivery_num` varchar(512) NOT NULL DEFAULT '0' COMMENT '快递单号',
   `status` int(11) NOT NULL DEFAULT '0' COMMENT '订单状态 100 未收钱 200 已收钱未发货 300 已收钱已发货 400 被签收订单完成',
   `data_status` int(4) NOT NULL DEFAULT '0' COMMENT '数据状态',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
